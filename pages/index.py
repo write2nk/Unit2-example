@@ -16,28 +16,33 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ## Your Value Proposition
+            ## Predict customers who will default!
 
-            Emphasize how the app will benefit users. Don't emphasize the underlying technology.
 
-            ✅ RUN is a running app that adapts to your fitness levels and designs personalized workouts to help you improve your running.
+            A credit default represents the financial failure of an entity. 
+            Default is the failure to repay a debt, including interest or principal, on a loan or security
+            This App  predicts who is capable of defaulting in a credict card payment based on the follwoing criteria:
+            Limit Balance, Education Level, marital status, Repayment level, Total Amount paid, Total bills accrued. 
 
-            ❌ RUN is the only intelligent running app that uses sophisticated deep neural net machine learning to make your run smarter because we believe in ML driven workouts.
+            This App will benefit the financial institution when giving loans/credits to individuals, to
+            predict a customer who would default in their credit repayment. 
+
+            Click the predict credit defaulter button to get
+
+            You can use this app to predict a customer that is capable of defaulting
 
             """
         ),
-        dcc.Link(dbc.Button('Your Call To Action', color='primary'), href='/predictions')
+        dcc.Link(dbc.Button('Predict Credit Defaulter', color='primary'), href='/predictions')
     ],
     md=4,
 )
 
-gapminder = px.data.gapminder()
-fig = px.scatter(gapminder.query("year==2007"), x="gdpPercap", y="lifeExp", size="pop", color="continent",
-           hover_name="country", log_x=True, size_max=60)
+
 
 column2 = dbc.Col(
     [
-        dcc.Graph(figure=fig),
+        html.Img(src='assets/image1.jpeg', className='img-fluid')
     ]
 )
 
