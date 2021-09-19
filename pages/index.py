@@ -1,10 +1,12 @@
 # Imports from 3rd party libraries
+
 import dash
 import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 import plotly.express as px
+import pandas as pd
 
 # Imports from this application
 from app import app
@@ -20,16 +22,16 @@ column1 = dbc.Col(
 
 
             A credit default represents the financial failure of an entity. 
-            Default is the failure to repay a debt, including interest or principal, on a loan or security
-            This App  predicts who is capable of defaulting in a credict card payment based on the follwoing criteria:
-            Limit Balance, Education Level, marital status, Repayment level, Total Amount paid, Total bills accrued. 
+            Default is the failure to repay a debt, including interest or principal, on a loan or security.
+            This App  predicts who is capable of defaulting in a credict card payment based on the following criteria:
+            Limit Balance, Education Level, marital status, Repayment level, Age, Total Amount paid, Total bills accrued. 
 
             This App will benefit the financial institution when giving loans/credits to individuals, to
             predict a customer who would default in their credit repayment. 
 
-            Click the predict credit defaulter button to get
-
-            You can use this app to predict a customer that is capable of defaulting
+            To use this app, just toggle the buttons and set the feature variables to your own
+            custom values. Click this link to use this web app and predict a credit card defaulter. 
+            Click the predict credit defaulter button to get started!
 
             """
         ),
@@ -37,12 +39,33 @@ column1 = dbc.Col(
     ],
     md=4,
 )
+df = pd.read_csv(r"C:\\Users\\Nkiru\\Unit2-example\\data\\my_file1.csv")
+fig = px.bar(df, x="Education_Level", y="Age", color="Default_Status", barmode="group")
+#app.layout = html.Div(children=[
+#    html.H1(children='Hello Dash'),
 
+#    html.Div(children='''
+#        Dash: A web application framework for your data.
+#    '''),
+#    ])
+
+
+
+
+
+app.layout = html.Div(children=[
+    html.H1(children='Hello Dash'),
+
+    html.Div(children='''
+        Dash: A web application framework for your data.
+    '''),
+
+])
 
 
 column2 = dbc.Col(
     [
-        html.Img(src='assets/image1.jpeg', className='img-fluid')
+         dcc.Graph(id='example-graph',figure=fig),
     ]
 )
 

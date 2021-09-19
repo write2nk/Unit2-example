@@ -1,0 +1,91 @@
+﻿ID,Education_Level,Age,Default_Status
+1,university,24,Default
+2,university,26,Default
+3,university,34,Non-Default
+4,university,37,Non-Default
+5,university,57,Non-Default
+6,graduate school,37,Non-Default
+7,graduate school,29,Non-Default
+8,university,23,Non-Default
+9,high school,28,Non-Default
+10,high school,35,Non-Default
+11,high school,34,Non-Default
+12,graduate school,51,Non-Default
+13,university,41,Non-Default
+14,university,30,Default
+15,graduate school,29,Non-Default
+16,high school,23,Non-Default
+17,graduate school,24,Default
+18,graduate school,49,Non-Default
+19,graduate school,49,Non-Default
+20,graduate school,29,Non-Default
+21,high school,39,Non-Default
+22,university,39,Default
+23,university,26,Default
+24,graduate school,40,Default
+25,graduate school,23,Non-Default
+26,high school,23,Non-Default
+27,graduate school,27,Default
+28,high school,30,Non-Default
+29,high school,47,Non-Default
+30,graduate school,26,Non-Default
+31,graduate school,27,Non-Default
+32,university,33,Default
+33,graduate school,32,Non-Default
+34,university,54,Non-Default
+35,graduate school,58,Non-Default
+36,graduate school,30,Non-Default
+37,university,40,Non-Default
+38,university,22,Non-Default
+39,graduate school,25,Default
+40,graduate school,31,Non-Default
+41,graduate school,33,Non-Default
+42,graduate school,25,Non-Default
+43,university,22,Non-Default
+44,university,37,Non-Default
+45,graduate school,30,Non-Default
+46,graduate school,29,Default
+47,graduate school,22,Default
+48,,46,Default
+49,university,32,Non-Default
+50,graduate school,24,Non-Default
+51,high school,42,Default
+52,high school,43,Non-Default
+53,university,49,Non-Default
+54,graduate school,25,Non-Default
+55,graduate school,29,Non-Default
+56,graduate school,45,Non-Default
+57,high school,34,Non-Default
+58,university,34,Non-Default
+59,graduate school,34,Non-Default
+60,university,29,Non-Default
+61,high school,28,Default
+62,university,39,Non-Default
+63,graduate school,29,Default
+64,university,46,Default
+65,university,51,Non-Default
+66,graduate school,57,Default
+67,university,56,Default
+68,graduate school,30,Non-Default
+69,high school,29,Non-Default
+70,high school,22,Non-Default
+71,graduate school,31,Non-Default
+72,university,29,Default
+73,university,32,Non-Default
+74,graduate school,37,Non-Default
+75,graduate school,32,Non-Default
+76,university,24,Non-Default
+77,high school,25,Non-Default
+78,graduate school,45,Non-Default
+79,university,22,Default
+80,university,44,Default
+81,high school,33,Non-Default
+82,graduate school,26,Non-Default
+83,high school,30,Default
+84,university,44,Non-Default
+85,high school,49,Non-Default
+86,university,33,Non-Default
+87,graduate school,45,Default
+88,university,32,Non-Default
+89,graduate school,35,Non-Default
+90,high school,44,Non-Default

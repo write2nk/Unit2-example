@@ -17,15 +17,16 @@ import pandas as pd
     Output('prediction-content', 'children'),
     [Input('limit-bal', 'value'),
     Input('pay-level', 'value'),
+    Input('age', 'value'),
     Input('total-bill', 'value'),
     Input('total-paid', 'value'),
     Input('education-lvl', 'value')]
 )
 
-def predict(limit_bal, pay_level, total_bill, total_paid,  education_lvl):
+def predict(limit_bal, pay_level, age, total_bill, total_paid,  education_lvl):
     df = pd.DataFrame(
-        columns  = ['Limit_Bal', 'Pay_Level', 'Total_bill', 'Total_paid',  'Education_lvl'],
-        data = [[limit_bal, pay_level, total_bill, total_paid,  education_lvl]]
+        columns  = ['Limit_Bal', 'Pay_Level', 'Age','Total_bill', 'Total_paid',  'Education_lvl'],
+        data = [[limit_bal, pay_level, age, total_bill, total_paid,  education_lvl]]
     )
 
     y_pred = best_xgb.predict(df)[0]
@@ -82,6 +83,15 @@ column1 = dbc.Col(
             className='mb-5', 
         ), 
 
+        dcc.Markdown('#### Age'), 
+        dcc.Input(
+            id = 'age',
+            placeholder='Enter Age', 
+            type = 'number',
+            value = '25',
+            className='mb-5',  
+        ),
+
         dcc.Markdown('#### Education Level'), 
         dcc.Dropdown(
             id='education-lvl', 
@@ -101,7 +111,20 @@ column1 = dbc.Col(
 
 column2 = dbc.Col(
     [
+        
         html.H2('Credit Defaulter', className='mb-5'), 
+
+
+        dcc.Markdown(
+            """
+            #### The prediction is dynamically shown below:
+
+
+
+        
+            """
+        ),
+        
         html.Div(id='prediction-content', className='lead')
     ]
 )
