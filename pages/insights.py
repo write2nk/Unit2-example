@@ -28,7 +28,7 @@ I applied the permutation importance to understand how the presence of each feat
 
             """
         ),
-        html.Img(src='assets/fig7.png', className='img-fluid')
+        html.Img(src='assets/Fig7.png', className='img-fluid')
 
     ],
 )

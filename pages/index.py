@@ -39,7 +39,7 @@ column1 = dbc.Col(
     ],
     md=4,
 )
-df = pd.read_csv(r"C:\\Users\\Nkiru\\Unit2-example\\data\\my_file1.csv")
+df = pd.read_csv('/home/nkiru/Unit2-example/data/my_file1.csv')
 fig = px.bar(df, x="Education_Level", y="Age", color="Default_Status", barmode="group")
 #app.layout = html.Div(children=[
 #    html.H1(children='Hello Dash'),
